@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="container">
+    <div id="questions">    
+        
+        <button class="details" onclick="details()">Step 1: Your Details</button>
+
+            <div id="details" style="display:none">
+              <form name="info">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Your name.." /> <br><br>
+            
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Your last name.."/><br><br>
+            
+                <label for="email">Email Address:</label>
+                <input type="text" id="email" name="email" placeholder="Your Email.." /><br><br>
+              
+                <input onclick="next()" type="button" value="Next >"/>
+            </div>
+
+      
+        <button class="details" ONCLICK="phone()">Step 2: More Comments</button>
+
+          <div id="phone" style="display:none">
+              <label for="num">Telephone Number:</label>
+              <input type="text" id="num" name="num" placeholder="Your number.."/> <br><br>
+
+              <label for="gen">Gender:</label>
+              <select id="gen" name="gen" placeholder="Select Gender..">
+                <option value="mal">Male</option>
+                <option value="fem">Female</option>
+              </select><br><br>
+            
+              <label for="dob">Date of birth:</label>
+              <div id="date2">
+                <input id="day" name="BirthDate" type="number" placeholder="DD" /> /
+                <input id="month" name="BirthDate" type="number" placeholder="MM"   /> /
+                <input id="year" name="BirthDate" type="number" maxlength="4" placeholder="YYYY" />
+              </div>
+        
+              <input type="button" onclick="next()" value="Next >"/>
+
+            
+              
+          </div>
+
+
+        <button class="details" onclick="comment()">Step 3: Final Comments</button>
+
+          <div id="comments" style="display:none">
+              <label for="comm">Comments:</label>
+              <input type="text" id="comm" name="comm" /> <br><br>
+              
+              <input type="submit" name="submit" value="Submit"/>
+            </form>
+          </div>
+    </div>
+  </div>
+
+<script src="work.js"></script>
+<script src="next.js"></script>
+
+</body>
+</html>
